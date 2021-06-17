@@ -16,22 +16,22 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER",
+        "type": "SEMVER",
         "fixed": "0.8.1"
       }
     ]
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/blake2"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2019-0019.html"
     },
     {
-      "kind": "REPORT",
+      "type": "REPORT",
       "url": "https://github.com/RustCrypto/MACs/issues/19"
     }
   ],

@@ -16,22 +16,22 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER",
+        "type": "SEMVER",
         "fixed": "0.4.16"
       }
     ]
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/tar"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2018-0002.html"
     },
     {
-      "kind": "WEB",
+      "type": "WEB",
       "url": "https://github.com/alexcrichton/tar-rs/pull/156"
     }
   ],

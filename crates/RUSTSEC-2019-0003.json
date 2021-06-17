@@ -16,11 +16,11 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER",
+        "type": "SEMVER",
         "fixed": "1.7.5"
       },
       {
-        "kind": "SEMVER",
+        "type": "SEMVER",
         "introduced": "2.0.0-0",
         "fixed": "2.6.0"
       }
@@ -28,15 +28,15 @@
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/protobuf"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2019-0003.html"
     },
     {
-      "kind": "REPORT",
+      "type": "REPORT",
       "url": "https://github.com/stepancheg/rust-protobuf/issues/411"
     }
   ],

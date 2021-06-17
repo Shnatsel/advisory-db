@@ -14,17 +14,17 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER"
+        "type": "SEMVER"
       }
     ]
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/fake-static"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2020-0013.html"
     }
   ],

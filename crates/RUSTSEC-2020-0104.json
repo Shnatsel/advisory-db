@@ -16,22 +16,22 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER",
+        "type": "SEMVER",
         "fixed": "0.3.0"
       }
     ]
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/gfwx"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2020-0104.html"
     },
     {
-      "kind": "REPORT",
+      "type": "REPORT",
       "url": "https://github.com/Devolutions/gfwx-rs/issues/7"
     }
   ],

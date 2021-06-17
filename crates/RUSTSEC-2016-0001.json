@@ -16,22 +16,22 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER",
+        "type": "SEMVER",
         "fixed": "0.9.0"
       }
     ]
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/openssl"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2016-0001.html"
     },
     {
-      "kind": "WEB",
+      "type": "WEB",
       "url": "https://github.com/sfackler/rust-openssl/releases/tag/v0.9.0"
     }
   ],

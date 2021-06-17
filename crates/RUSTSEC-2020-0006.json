@@ -16,7 +16,7 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER",
+        "type": "SEMVER",
         "introduced": "3.0.0",
         "fixed": "3.2.1"
       }
@@ -24,15 +24,15 @@
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/bumpalo"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2020-0006.html"
     },
     {
-      "kind": "REPORT",
+      "type": "REPORT",
       "url": "https://github.com/fitzgen/bumpalo/issues/69"
     }
   ],

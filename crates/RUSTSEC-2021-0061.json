@@ -14,21 +14,21 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER"
+        "type": "SEMVER"
       }
     ]
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/aes-ctr"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2021-0061.html"
     },
     {
-      "kind": "WEB",
+      "type": "WEB",
       "url": "https://github.com/RustCrypto/block-ciphers/pull/200"
     }
   ],

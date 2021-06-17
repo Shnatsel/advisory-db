@@ -16,22 +16,22 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER",
+        "type": "SEMVER",
         "fixed": "0.3.0"
       }
     ]
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/try-mutex"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2020-0087.html"
     },
     {
-      "kind": "REPORT",
+      "type": "REPORT",
       "url": "https://github.com/mpdn/try-mutex/issues/2"
     }
   ],

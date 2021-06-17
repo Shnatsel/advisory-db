@@ -16,21 +16,21 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER"
+        "type": "SEMVER"
       }
     ]
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/atomic-option"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2020-0113.html"
     },
     {
-      "kind": "REPORT",
+      "type": "REPORT",
       "url": "https://github.com/reem/rust-atomic-option/issues/4"
     }
   ],

@@ -17,21 +17,21 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER"
+        "type": "SEMVER"
       }
     ]
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/arenavec"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2021-0040.html"
     },
     {
-      "kind": "REPORT",
+      "type": "REPORT",
       "url": "https://github.com/ibabushkin/arenavec/issues/1"
     }
   ],

@@ -14,21 +14,21 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER"
+        "type": "SEMVER"
       }
     ]
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/miscreant"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2021-0062.html"
     },
     {
-      "kind": "WEB",
+      "type": "WEB",
       "url": "https://github.com/miscreant/miscreant.rs/commit/5d921f579e0c2b9960d472cf377b8487d97fbcec"
     }
   ],

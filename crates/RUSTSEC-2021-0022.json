@@ -16,22 +16,22 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER",
+        "type": "SEMVER",
         "fixed": "1.2.0"
       }
     ]
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/yottadb"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2021-0022.html"
     },
     {
-      "kind": "REPORT",
+      "type": "REPORT",
       "url": "https://gitlab.com/YottaDB/Lang/YDBRust/-/issues/40"
     }
   ],

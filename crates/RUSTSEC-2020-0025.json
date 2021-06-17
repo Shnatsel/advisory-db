@@ -16,21 +16,21 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER"
+        "type": "SEMVER"
       }
     ]
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/bigint"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2020-0025.html"
     },
     {
-      "kind": "WEB",
+      "type": "WEB",
       "url": "https://github.com/paritytech/bigint/commit/7e71521a61b009afc94c91135353102658550d42"
     }
   ],

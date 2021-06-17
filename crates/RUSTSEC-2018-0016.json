@@ -14,22 +14,22 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER",
+        "type": "SEMVER",
         "fixed": "3.0.2-0"
       }
     ]
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/quickersort"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2018-0016.html"
     },
     {
-      "kind": "WEB",
+      "type": "WEB",
       "url": "https://github.com/notriddle/quickersort/commit/0bc164366315801f0c6b31f4081b7df9fc894076"
     }
   ],

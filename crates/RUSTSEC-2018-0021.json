@@ -16,22 +16,22 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER",
+        "type": "SEMVER",
         "fixed": "1.2.1"
       }
     ]
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/libpulse-binding"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2018-0021.html"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://github.com/jnqnfe/pulse-binding-rust/security/advisories/GHSA-ghpq-vjxw-ch5w"
     }
   ],

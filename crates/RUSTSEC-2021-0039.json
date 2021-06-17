@@ -16,21 +16,21 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER"
+        "type": "SEMVER"
       }
     ]
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/endian_trait"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2021-0039.html"
     },
     {
-      "kind": "REPORT",
+      "type": "REPORT",
       "url": "https://gitlab.com/myrrlyn/endian_trait/-/issues/1"
     }
   ],

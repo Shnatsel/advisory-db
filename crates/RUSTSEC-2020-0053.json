@@ -14,21 +14,21 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER"
+        "type": "SEMVER"
       }
     ]
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/dirs"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2020-0053.html"
     },
     {
-      "kind": "WEB",
+      "type": "WEB",
       "url": "https://github.com/dirs-dev/dirs-rs"
     }
   ],

@@ -19,22 +19,22 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER",
+        "type": "SEMVER",
         "fixed": "0.7.1"
       }
     ]
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/tough"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2020-0024.html"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://github.com/awslabs/tough/security/advisories/GHSA-5q2r-92f9-4m49"
     }
   ],

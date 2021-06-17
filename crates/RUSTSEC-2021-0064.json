@@ -14,21 +14,21 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER"
+        "type": "SEMVER"
       }
     ]
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/cpuid-bool"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2021-0064.html"
     },
     {
-      "kind": "WEB",
+      "type": "WEB",
       "url": "https://github.com/RustCrypto/utils/pull/381"
     }
   ],

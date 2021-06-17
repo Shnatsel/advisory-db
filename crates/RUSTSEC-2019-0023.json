@@ -16,11 +16,11 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER",
+        "type": "SEMVER",
         "fixed": "0.6.4"
       },
       {
-        "kind": "SEMVER",
+        "type": "SEMVER",
         "introduced": "0.7.0-0",
         "fixed": "0.7.1"
       }
@@ -28,15 +28,15 @@
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/string-interner"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2019-0023.html"
     },
     {
-      "kind": "REPORT",
+      "type": "REPORT",
       "url": "https://github.com/Robbepop/string-interner/issues/9"
     }
   ],

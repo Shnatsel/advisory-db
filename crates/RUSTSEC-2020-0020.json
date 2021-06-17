@@ -14,21 +14,21 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER"
+        "type": "SEMVER"
       }
     ]
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/stb_truetype"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2020-0020.html"
     },
     {
-      "kind": "WEB",
+      "type": "WEB",
       "url": "https://gitlab.redox-os.org/redox-os/stb_truetype-rs/-/commit/f1f5be4794e87bfc80a4255bc3f23ed75dd77645"
     }
   ],

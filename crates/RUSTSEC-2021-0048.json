@@ -16,26 +16,26 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER",
+        "type": "SEMVER",
         "fixed": "1.0.9"
       },
       {
-        "kind": "SEMVER",
+        "type": "SEMVER",
         "introduced": "2.0.0-0"
       }
     ]
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/stackvector"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2021-0048.html"
     },
     {
-      "kind": "REPORT",
+      "type": "REPORT",
       "url": "https://github.com/Alexhuszagh/rust-stackvector/issues/2"
     }
   ],

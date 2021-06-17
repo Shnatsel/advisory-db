@@ -18,22 +18,22 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER",
+        "type": "SEMVER",
         "fixed": "2.3.0"
       }
     ]
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/async-h1"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2020-0093.html"
     },
     {
-      "kind": "WEB",
+      "type": "WEB",
       "url": "https://github.com/http-rs/async-h1/releases/tag/v2.3.0"
     }
   ],

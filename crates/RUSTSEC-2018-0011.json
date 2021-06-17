@@ -16,7 +16,7 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER",
+        "type": "SEMVER",
         "introduced": "3.5.1-0",
         "fixed": "3.6.0"
       }
@@ -24,15 +24,15 @@
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/arrayfire"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2018-0011.html"
     },
     {
-      "kind": "WEB",
+      "type": "WEB",
       "url": "https://github.com/arrayfire/arrayfire-rust/pull/177"
     }
   ],

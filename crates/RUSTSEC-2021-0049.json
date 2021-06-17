@@ -1,9 +1,9 @@
 {
   "id": "RUSTSEC-2021-0049",
-  "modified": "2021-04-13T21:10:09+00:00",
+  "modified": "2021-06-16T21:05:39+00:00",
   "published": "2021-02-18T12:00:00+00:00",
   "aliases": [
-    "CVE-2021-299340"
+    "CVE-2021-29940"
   ],
   "related": [],
   "package": {
@@ -16,21 +16,21 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER"
+        "type": "SEMVER"
       }
     ]
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/through"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2021-0049.html"
     },
     {
-      "kind": "REPORT",
+      "type": "REPORT",
       "url": "https://github.com/gretchenfrage/through/issues/1"
     }
   ],

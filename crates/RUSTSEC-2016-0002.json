@@ -18,22 +18,22 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER",
+        "type": "SEMVER",
         "fixed": "0.9.4"
       }
     ]
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/hyper"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2016-0002.html"
     },
     {
-      "kind": "WEB",
+      "type": "WEB",
       "url": "https://github.com/hyperium/hyper/blob/master/CHANGELOG.md#v094-2016-05-09"
     }
   ],

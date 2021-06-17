@@ -14,22 +14,22 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER",
+        "type": "SEMVER",
         "fixed": "0.1.24-0"
       }
     ]
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/chan"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2018-0014.html"
     },
     {
-      "kind": "WEB",
+      "type": "WEB",
       "url": "https://github.com/BurntSushi/chan/commit/0a5c0d4ad4adc90a54ee04a427389acf2e157275"
     }
   ],

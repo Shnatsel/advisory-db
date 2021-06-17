@@ -16,22 +16,22 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER",
+        "type": "SEMVER",
         "fixed": "2.1.0"
       }
     ]
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/ammonia"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2019-0001.html"
     },
     {
-      "kind": "WEB",
+      "type": "WEB",
       "url": "https://github.com/rust-ammonia/ammonia/blob/master/CHANGELOG.md#210"
     }
   ],

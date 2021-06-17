@@ -16,12 +16,12 @@
   "affects": {
     "ranges": [
       {
-        "kind": "SEMVER",
+        "type": "SEMVER",
         "introduced": "0.2.2",
         "fixed": "1.1.1"
       },
       {
-        "kind": "SEMVER",
+        "type": "SEMVER",
         "introduced": "2.0.0-0",
         "fixed": "2.0.1"
       }
@@ -29,15 +29,15 @@
   },
   "references": [
     {
-      "kind": "PACKAGE",
+      "type": "PACKAGE",
       "url": "https://crates.io/crates/ordered-float"
     },
     {
-      "kind": "ADVISORY",
+      "type": "ADVISORY",
       "url": "https://rustsec.org/advisories/RUSTSEC-2020-0082.html"
     },
     {
-      "kind": "WEB",
+      "type": "WEB",
       "url": "https://github.com/reem/rust-ordered-float/pull/71"
     }
   ],
