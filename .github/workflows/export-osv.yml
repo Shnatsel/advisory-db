@@ -1,0 +1,27 @@
+name: Publish Web
+
+on:
+  push:
+    branches: main
+
+jobs:
+  publish-web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+      # Caching is disabled while we use code from git
+      # - uses: actions/cache@v1
+      #   with:
+      #     path: ~/.cargo/bin
+      #     key: rustsec-admin-v0.4.3
+      - run: |
+          cargo install rustsec-admin --git https://github.com/Shnatsel/rustsec
+          mkdir -p crates
+          rustsec-admin osv -o crates
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "Update gh-pages"
+          git push
