@@ -1,4 +1,4 @@
-name: Publish Web
+name: Export to OSV
 
 on:
   push:
