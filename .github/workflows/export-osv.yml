@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: osv-experimental-v0.7
+          ref: osv
       # Caching is disabled while we use code from git
       # - uses: actions/cache@v1
       #   with:
