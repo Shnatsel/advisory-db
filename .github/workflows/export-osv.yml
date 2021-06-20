@@ -17,7 +17,7 @@ jobs:
       #     path: ~/.cargo/bin
       #     key: rustsec-admin-v0.4.3
       - run: |
-          cargo install rustsec-admin --git https://github.com/Shnatsel/rustsec
+          cargo install rustsec-admin --git https://github.com/Shnatsel/rustsec --branch osv
           mkdir -p crates
           rustsec-admin osv -o crates
           git config user.name github-actions
