@@ -124,3 +124,4 @@ All content in this repository is placed in the public domain.
 [cargo-audit]: https://github.com/rustsec/cargo-audit
 [cargo-deny]: https://github.com/EmbarkStudios/cargo-deny
 [CONTRIBUTING.md]: https://github.com/RustSec/advisory-db/blob/main/CONTRIBUTING.md
+
