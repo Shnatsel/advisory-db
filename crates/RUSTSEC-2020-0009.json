@@ -1,6 +1,6 @@
 {
   "id": "RUSTSEC-2020-0009",
-  "modified": "2021-01-04T17:02:59+00:00",
+  "modified": "2021-06-23T21:24:04+00:00",
   "published": "2020-04-11T12:00:00+00:00",
   "aliases": [
     "CVE-2020-35864"
@@ -17,7 +17,8 @@
     "ranges": [
       {
         "type": "SEMVER",
-        "introduced": "0.4.0"
+        "introduced": "0.4.0",
+        "fixed": "2.0.0"
       }
     ]
   },
