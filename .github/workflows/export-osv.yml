@@ -19,7 +19,7 @@ jobs:
       - run: |
           cargo install rustsec-admin --git https://github.com/Shnatsel/rustsec --branch osv
           mkdir -p crates
-          rustsec-admin osv -o crates
+          rustsec-admin osv crates
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
