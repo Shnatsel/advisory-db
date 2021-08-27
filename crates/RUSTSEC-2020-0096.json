@@ -6,21 +6,41 @@
     "CVE-2020-36204"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "im",
-    "purl": "pkg:cargo/im"
-  },
   "summary": "TreeFocus lacks bounds on its Send and Sync traits",
   "details": "Affected versions of `im` contains `TreeFocus` that unconditionally implements `Send` and `Sync`.\n\nThis allows a data race in safe Rust code if `TreeFocus` is extracted from `Focus` type.\nTypical users that only use `Focus` type are not affected.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER",
-        "introduced": "12.0.0"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "im",
+        "purl": "pkg:cargo/im"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [
+          "thread-safety"
+        ],
+        "cvss": null,
+        "informational": "unsound"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "12.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -34,19 +54,5 @@
       "type": "REPORT",
       "url": "https://github.com/bodil/im-rs/issues/157"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [
-      "thread-safety"
-    ],
-    "cvss": null,
-    "informational": "unsound"
-  }
+  ]
 }

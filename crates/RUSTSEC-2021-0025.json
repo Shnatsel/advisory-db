@@ -4,20 +4,39 @@
   "published": "2021-02-15T12:00:00+00:00",
   "aliases": [],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "jsonrpc-quic",
-    "purl": "pkg:cargo/jsonrpc-quic"
-  },
   "summary": "crate has been renamed to `qjsonrpc`",
   "details": "This crate has been renamed from `jsonrpc-quic` to `qjsonrpc`.\n\nThe new repository location is:\n\n<https://github.com/maidsafe/sn_api>",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "jsonrpc-quic",
+        "purl": "pkg:cargo/jsonrpc-quic"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [],
+        "cvss": null,
+        "informational": "unmaintained"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -31,17 +50,5 @@
       "type": "WEB",
       "url": "https://github.com/maidsafe/sn_api/pull/623"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [],
-    "cvss": null,
-    "informational": "unmaintained"
-  }
+  ]
 }

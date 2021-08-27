@@ -4,20 +4,39 @@
   "published": "2020-08-25T12:00:00+00:00",
   "aliases": [],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "chunky",
-    "purl": "pkg:cargo/chunky"
-  },
   "summary": "Chunk API does not respect align requirement",
   "details": "Chunk API does not respect the align requirement of types. Unaligned reference can be created with the API, which is an undefined behavior.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "chunky",
+        "purl": "pkg:cargo/chunky"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [],
+        "cvss": null,
+        "informational": "unsound"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -31,17 +50,5 @@
       "type": "REPORT",
       "url": "https://github.com/aeplay/chunky/issues/2"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [],
-    "cvss": null,
-    "informational": "unsound"
-  }
+  ]
 }

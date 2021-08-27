@@ -4,20 +4,39 @@
   "published": "2021-05-06T12:00:00+00:00",
   "aliases": [],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "cpuid-bool",
-    "purl": "pkg:cargo/cpuid-bool"
-  },
   "summary": "`cpuid-bool` has been renamed to `cpufeatures`",
   "details": "Please use the `cpufeatures`` crate going forward:\n\n<https://github.com/RustCrypto/utils/tree/master/cpufeatures>\n\nThere will be no further releases of `cpuid-bool`.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "cpuid-bool",
+        "purl": "pkg:cargo/cpuid-bool"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [],
+        "cvss": null,
+        "informational": "unmaintained"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -31,17 +50,5 @@
       "type": "WEB",
       "url": "https://github.com/RustCrypto/utils/pull/381"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [],
-    "cvss": null,
-    "informational": "unmaintained"
-  }
+  ]
 }

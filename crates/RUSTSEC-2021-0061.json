@@ -4,20 +4,39 @@
   "published": "2021-04-29T12:00:00+00:00",
   "aliases": [],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "aes-ctr",
-    "purl": "pkg:cargo/aes-ctr"
-  },
   "summary": "`aes-ctr` has been merged into the `aes` crate",
   "details": "Please use the `aes` crate going forward. The new repository location is at:\n\n<https://github.com/RustCrypto/block-ciphers/tree/master/aes>\n\nThe `aes` crate now has an optional `ctr` feature which autodetects SIMD\nfeatures on `i686`/`x86-64` targets and uses them if available, or otherwise\nfalls back to the implementation in the `ctr` crate.\n\nIf you would prefer not to have this autodetection performed, use the `aes`\ncrate directly with the `ctr` crate.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "aes-ctr",
+        "purl": "pkg:cargo/aes-ctr"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [],
+        "cvss": null,
+        "informational": "unmaintained"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -31,17 +50,5 @@
       "type": "WEB",
       "url": "https://github.com/RustCrypto/block-ciphers/pull/200"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [],
-    "cvss": null,
-    "informational": "unmaintained"
-  }
+  ]
 }

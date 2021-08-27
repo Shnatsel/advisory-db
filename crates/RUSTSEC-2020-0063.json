@@ -4,20 +4,39 @@
   "published": "2020-11-02T12:00:00+00:00",
   "aliases": [],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "safe-nd",
-    "purl": "pkg:cargo/safe-nd"
-  },
   "summary": "crate has been renamed to `safe-nd`",
   "details": "This crate has been renamed from `safe-nd` to `sn_data_types`.\n\nThe new repository location is:\n\n<https://github.com/maidsafe/sn_data_types>",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "safe-nd",
+        "purl": "pkg:cargo/safe-nd"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [],
+        "cvss": null,
+        "informational": "unmaintained"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -31,17 +50,5 @@
       "type": "WEB",
       "url": "https://github.com/maidsafe/sn_data_types/pull/218"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [],
-    "cvss": null,
-    "informational": "unmaintained"
-  }
+  ]
 }

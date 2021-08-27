@@ -6,21 +6,44 @@
     "CVE-2021-3449"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "openssl-src",
-    "purl": "pkg:cargo/openssl-src"
-  },
   "summary": "NULL pointer deref in signature_algorithms processing",
   "details": "An OpenSSL TLS server may crash if sent a maliciously crafted renegotiation\nClientHello message from a client. If a TLSv1.2 renegotiation ClientHello omits\nthe signature_algorithms extension (where it was present in the initial\nClientHello), but includes a signature_algorithms_cert extension then a NULL\npointer dereference will result, leading to a crash and a denial of service\nattack.\n\nA server is only vulnerable if it has TLSv1.2 and renegotiation enabled (which\nis the default configuration). OpenSSL TLS clients are not impacted by this\nissue.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER",
-        "fixed": "111.15.0"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "openssl-src",
+        "purl": "pkg:cargo/openssl-src"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [
+          "denial-of-service"
+        ],
+        "cvss": null,
+        "informational": null
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "111.15.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -34,19 +57,5 @@
       "type": "WEB",
       "url": "https://www.openssl.org/news/secadv/20210325.txt"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [
-      "denial-of-service"
-    ],
-    "cvss": null,
-    "informational": null
-  }
+  ]
 }

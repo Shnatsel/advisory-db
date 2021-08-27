@@ -6,21 +6,41 @@
     "CVE-2021-25908"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "fil-ocl",
-    "purl": "pkg:cargo/fil-ocl"
-  },
   "summary": "EventList's From<EventList> conversions can double drop on panic.",
   "details": "Affected versions of this crate read from a container using `ptr::read` in\n`From<EventList>`, and then call a user specified `Into<Event>` function.\n\nThis issue can result in a double-free if the user provided function panics.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER",
-        "introduced": "0.12.0"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "fil-ocl",
+        "purl": "pkg:cargo/fil-ocl"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [
+          "memory-corruption"
+        ],
+        "cvss": null,
+        "informational": null
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.12.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -34,19 +54,5 @@
       "type": "REPORT",
       "url": "https://github.com/cogciprocate/ocl/issues/194"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [
-      "memory-corruption"
-    ],
-    "cvss": null,
-    "informational": null
-  }
+  ]
 }

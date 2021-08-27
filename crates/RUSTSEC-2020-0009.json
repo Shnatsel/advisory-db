@@ -6,22 +6,45 @@
     "CVE-2020-35864"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "flatbuffers",
-    "purl": "pkg:cargo/flatbuffers"
-  },
   "summary": "`read_scalar` and `read_scalar_at` allow transmuting values without `unsafe` blocks",
   "details": "The `read_scalar` and `read_scalar_at` functions are unsound\nbecause they allow transmuting values without `unsafe` blocks.\n\nThe following example shows how to create a dangling reference:\n\n```\nfn main() {\n    #[derive(Copy, Clone, PartialEq, Debug)]\n    struct S(&'static str);\n    impl flatbuffers::EndianScalar for S {\n        fn to_little_endian(self) -> Self { self }\n        fn from_little_endian(self) -> Self { self }\n    }\n    println!(\"{:?}\", flatbuffers::read_scalar::<S>(&[1; std::mem::size_of::<S>()]));\n}\n```",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER",
-        "introduced": "0.4.0",
-        "fixed": "2.0.0"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "flatbuffers",
+        "purl": "pkg:cargo/flatbuffers"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": [
+            "flatbuffers::read_scalar",
+            "flatbuffers::read_scalar_at"
+          ]
+        }
+      },
+      "database_specific": {
+        "categories": [],
+        "cvss": null,
+        "informational": null
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.4.0"
+            },
+            {
+              "fixed": "2.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -35,20 +58,5 @@
       "type": "REPORT",
       "url": "https://github.com/google/flatbuffers/issues/5825"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": [
-        "flatbuffers::read_scalar",
-        "flatbuffers::read_scalar_at"
-      ]
-    }
-  },
-  "database_specific": {
-    "categories": [],
-    "cvss": null,
-    "informational": null
-  }
+  ]
 }

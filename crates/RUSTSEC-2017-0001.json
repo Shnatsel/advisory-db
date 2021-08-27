@@ -6,21 +6,42 @@
     "CVE-2017-1000168"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "sodiumoxide",
-    "purl": "pkg:cargo/sodiumoxide"
-  },
   "summary": "scalarmult() vulnerable to degenerate public keys",
   "details": "The `scalarmult()` function included in previous versions of this crate\naccepted all-zero public keys, for which the resulting Diffie-Hellman shared\nsecret will always be zero regardless of the private key used.\n\nThis issue was fixed by checking for this class of keys and rejecting them\nif they are used.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER",
-        "fixed": "0.0.14"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "sodiumoxide",
+        "purl": "pkg:cargo/sodiumoxide"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [],
+        "cvss": null,
+        "informational": null
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "0.0.14"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -34,17 +55,5 @@
       "type": "REPORT",
       "url": "https://github.com/dnaq/sodiumoxide/issues/154"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [],
-    "cvss": null,
-    "informational": null
-  }
+  ]
 }

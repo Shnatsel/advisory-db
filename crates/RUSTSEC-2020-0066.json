@@ -4,20 +4,39 @@
   "published": "2020-11-02T12:00:00+00:00",
   "aliases": [],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "safe_bindgen",
-    "purl": "pkg:cargo/safe_bindgen"
-  },
   "summary": "crate has been renamed to `sn_bindgen`",
   "details": "This crate has been renamed from `safe_bindgen` to `sn_bindgen`.\n\nThe new repository location is:\n\n<https://github.com/maidsafe/sn_bindgen>",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "safe_bindgen",
+        "purl": "pkg:cargo/safe_bindgen"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [],
+        "cvss": null,
+        "informational": "unmaintained"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -31,17 +50,5 @@
       "type": "WEB",
       "url": "https://github.com/maidsafe/sn_bindgen/pull/67"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [],
-    "cvss": null,
-    "informational": "unmaintained"
-  }
+  ]
 }

@@ -4,20 +4,42 @@
   "published": "2020-12-17T12:00:00+00:00",
   "aliases": [],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "disrustor",
-    "purl": "pkg:cargo/disrustor"
-  },
   "summary": "RingBuffer can create multiple mutable references and cause data races",
   "details": "The `RingBuffer` type retrieves mutable references from the `DataProvider` in a\nnon-atomic manner, potentially allowing the creation of multiple mutable\nreferences. `RingBuffer` also implements the `Send` and `Sync` traits for all\ntypes `T`.\n\nThis allows undefined behavior from the aliased mutable references as well\nas data races.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "disrustor",
+        "purl": "pkg:cargo/disrustor"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [
+          "memory-corruption",
+          "thread-safety"
+        ],
+        "cvss": null,
+        "informational": null
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -31,20 +53,5 @@
       "type": "REPORT",
       "url": "https://github.com/sklose/disrustor/issues/1"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [
-      "memory-corruption",
-      "thread-safety"
-    ],
-    "cvss": null,
-    "informational": null
-  }
+  ]
 }

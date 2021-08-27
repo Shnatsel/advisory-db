@@ -4,21 +4,42 @@
   "published": "2019-11-21T12:00:00+00:00",
   "aliases": [],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "crust",
-    "purl": "pkg:cargo/crust"
-  },
   "summary": "crust repo has been archived; use libp2p instead",
   "details": "** The `crust` crate repo was archived with no warning or explanation.**\n\nGiven that it was archived with no warning or successor, there's not an\nofficial replacement but [`rust-libp2p`](https://github.com/libp2p/rust-libp2p)\nlooks like it's got a similar feature set and is actively maintained.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER",
-        "fixed": "0.32.2-0"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "crust",
+        "purl": "pkg:cargo/crust"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [],
+        "cvss": null,
+        "informational": "unmaintained"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "0.32.2-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -32,17 +53,5 @@
       "type": "WEB",
       "url": "https://github.com/maidsafe/crust"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [],
-    "cvss": null,
-    "informational": "unmaintained"
-  }
+  ]
 }

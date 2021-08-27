@@ -4,20 +4,41 @@
   "published": "2021-03-07T12:00:00+00:00",
   "aliases": [],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "algorithmica",
-    "purl": "pkg:cargo/algorithmica"
-  },
   "summary": "'merge_sort::merge()' crashes with double-free for `T: Drop`",
   "details": "In the affected versions of this crate, `merge_sort::merge()` wildly duplicates and drops ownership of `T` without guarding against double-free. Due to such implementation,\nsimply invoking `merge_sort::merge()` on `Vec<T: Drop>` can cause **double free** bugs.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "algorithmica",
+        "purl": "pkg:cargo/algorithmica"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [
+          "memory-corruption"
+        ],
+        "cvss": null,
+        "informational": null
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -31,19 +52,5 @@
       "type": "REPORT",
       "url": "https://github.com/AbrarNitk/algorithmica/issues/1"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [
-      "memory-corruption"
-    ],
-    "cvss": null,
-    "informational": null
-  }
+  ]
 }

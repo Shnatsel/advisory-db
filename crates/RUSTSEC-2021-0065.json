@@ -4,20 +4,39 @@
   "published": "2021-05-07T12:00:00+00:00",
   "aliases": [],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "anymap",
-    "purl": "pkg:cargo/anymap"
-  },
   "summary": "anymap is unmaintained.",
   "details": "The `anymap` crate does not appear to be maintained, and the most recent\npublished version 0.12.1 includes a soundness bug. This has been\n[fixed](https://github.com/chris-morgan/anymap/pull/32) a few years ago, but\nwas never released.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "anymap",
+        "purl": "pkg:cargo/anymap"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [],
+        "cvss": null,
+        "informational": "unmaintained"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -31,17 +50,5 @@
       "type": "REPORT",
       "url": "https://github.com/chris-morgan/anymap/issues/37"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [],
-    "cvss": null,
-    "informational": "unmaintained"
-  }
+  ]
 }

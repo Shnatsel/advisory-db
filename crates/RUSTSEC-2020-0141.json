@@ -4,20 +4,42 @@
   "published": "2020-12-10T12:00:00+00:00",
   "aliases": [],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "noise_search",
-    "purl": "pkg:cargo/noise_search"
-  },
   "summary": "MvccRwLock allows data races & aliasing violations",
   "details": "Affected versions of this crate unconditionally implement Send/Sync for `MvccRwLock`.\nThis can lead to data races when types that are either `!Send` or `!Sync` (e.g. `Rc<T>`, `Arc<Cell<_>>`) are contained inside `MvccRwLock` and sent across thread boundaries. The data races can potentially lead to memory corruption (as demonstrated in the PoC from the original report issue).\n\nAlso, safe APIs of `MvccRwLock` allow aliasing violations by allowing `&T` and `LockResult<MutexGuard<Box<T>>>` to co-exist in conflicting lifetime regions. The APIs of `MvccRwLock` should either be marked as `unsafe` or `MbccRwLock` should be changed to private or pub(crate).",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "noise_search",
+        "purl": "pkg:cargo/noise_search"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [
+          "memory-corruption",
+          "thread-safety"
+        ],
+        "cvss": null,
+        "informational": null
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -31,20 +53,5 @@
       "type": "REPORT",
       "url": "https://github.com/pipedown/noise/issues/72"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [
-      "memory-corruption",
-      "thread-safety"
-    ],
-    "cvss": null,
-    "informational": null
-  }
+  ]
 }

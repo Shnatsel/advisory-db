@@ -6,20 +6,39 @@
     "CVE-2020-35880"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "bigint",
-    "purl": "pkg:cargo/bigint"
-  },
   "summary": "bigint is unmaintained, use uint instead",
   "details": "The `bigint` crate is not maintained any more and contains several known bugs (including a soundness bug);\nuse [`uint`](https://crates.io/crates/uint) instead.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "bigint",
+        "purl": "pkg:cargo/bigint"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [],
+        "cvss": null,
+        "informational": "unmaintained"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -33,17 +52,5 @@
       "type": "WEB",
       "url": "https://github.com/paritytech/bigint/commit/7e71521a61b009afc94c91135353102658550d42"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [],
-    "cvss": null,
-    "informational": "unmaintained"
-  }
+  ]
 }

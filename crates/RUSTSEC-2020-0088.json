@@ -6,21 +6,44 @@
     "CVE-2020-35925"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "magnetic",
-    "purl": "pkg:cargo/magnetic"
-  },
   "summary": "MPMCConsumer/Producer allows sending non-Send type across threads",
   "details": "Affected versions of this crate unconditionally implemented `Sync` and `Send` traits for `MPMCConsumer` and `MPMCProducer` types.\n\nThis allows users to send types that do not implement `Send` trait across thread boundaries, which can cause a data race.\n\nThe flaw was corrected in the 2.0.1 release by adding `T: Send` bound to affected Sync/Send trait implementations.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER",
-        "fixed": "2.0.1"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "magnetic",
+        "purl": "pkg:cargo/magnetic"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [
+          "thread-safety"
+        ],
+        "cvss": null,
+        "informational": null
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "2.0.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -34,19 +57,5 @@
       "type": "REPORT",
       "url": "https://github.com/johnshaw/magnetic/issues/9"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [
-      "thread-safety"
-    ],
-    "cvss": null,
-    "informational": null
-  }
+  ]
 }

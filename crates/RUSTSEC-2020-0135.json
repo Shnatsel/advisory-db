@@ -4,20 +4,42 @@
   "published": "2020-11-17T12:00:00+00:00",
   "aliases": [],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "slock",
-    "purl": "pkg:cargo/slock"
-  },
   "summary": "Slock<T> allows sending non-Send types across thread boundaries",
   "details": "`Slock<T>` unconditionally implements `Send`/`Sync`.\n\nAffected versions of this crate allows sending non-Send types to other threads,\nwhich can lead to data races and memory corruption due to the data race.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "slock",
+        "purl": "pkg:cargo/slock"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [
+          "memory-corruption",
+          "thread-safety"
+        ],
+        "cvss": null,
+        "informational": null
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -31,20 +53,5 @@
       "type": "REPORT",
       "url": "https://github.com/BrokenLamp/slock-rs/issues/2"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [
-      "memory-corruption",
-      "thread-safety"
-    ],
-    "cvss": null,
-    "informational": null
-  }
+  ]
 }

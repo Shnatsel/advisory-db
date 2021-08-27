@@ -4,20 +4,39 @@
   "published": "2021-04-29T12:00:00+00:00",
   "aliases": [],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "aesni",
-    "purl": "pkg:cargo/aesni"
-  },
   "summary": "`aesni` has been merged into the `aes` crate",
   "details": "Please use the `aes` crate going forward. The new repository location is at:\n\n<https://github.com/RustCrypto/block-ciphers/tree/master/aes>\n\nAES-NI is now autodetected at runtime on `i686`/`x86-64` platforms.\nIf AES-NI is not present, the `aes` crate will fallback to a constant-time\nportable software implementation.\n\nTo prevent this fallback (and have absence of AES-NI result in an illegal\ninstruction crash instead), continue to pass the same RUSTFLAGS which were\npreviously required for the `aesni` crate to compile:\n\n```\nRUSTFLAGS=-Ctarget-feature=+aes,+ssse3\n```",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "aesni",
+        "purl": "pkg:cargo/aesni"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [],
+        "cvss": null,
+        "informational": "unmaintained"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -31,17 +50,5 @@
       "type": "WEB",
       "url": "https://github.com/RustCrypto/block-ciphers/pull/200"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [],
-    "cvss": null,
-    "informational": "unmaintained"
-  }
+  ]
 }

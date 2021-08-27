@@ -6,21 +6,45 @@
     "CVE-2020-36215"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "hashconsing",
-    "purl": "pkg:cargo/hashconsing"
-  },
   "summary": "hashconsing's HConsed lacks Send/Sync bound for its Send/Sync trait.",
   "details": "Affected versions of `hashconsing` implements `Send`/`Sync` for its `HConsed` type without restricting it to `Send`able types and `Sync`able types.\n\nThis allows non-`Sync` types such as `Cell` to be shared across threads leading to undefined behavior and memory corruption in concurrent programs.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER",
-        "fixed": "1.1.0"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "hashconsing",
+        "purl": "pkg:cargo/hashconsing"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [
+          "memory-corruption",
+          "thread-safety"
+        ],
+        "cvss": null,
+        "informational": null
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "1.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -34,20 +58,5 @@
       "type": "REPORT",
       "url": "https://github.com/AdrienChampion/hashconsing/issues/1"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [
-      "memory-corruption",
-      "thread-safety"
-    ],
-    "cvss": null,
-    "informational": null
-  }
+  ]
 }

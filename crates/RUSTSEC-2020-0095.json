@@ -4,21 +4,42 @@
   "published": "2020-12-20T12:00:00+00:00",
   "aliases": [],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "difference",
-    "purl": "pkg:cargo/difference"
-  },
   "summary": "difference is unmaintained",
   "details": "The author of the `difference` crate is unresponsive.\n\nMaintained alternatives:\n\n- [`dissimilar`](https://crates.io/crates/dissimilar)\n\n- [`similar`](https://crates.io/crates/similar)\n\n- [`treediff`](https://crates.io/crates/treediff)\n\n- [`diffus`](https://crates.io/crates/diffus)",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER",
-        "fixed": "2.0.1-0"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "difference",
+        "purl": "pkg:cargo/difference"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [],
+        "cvss": null,
+        "informational": "unmaintained"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "2.0.1-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -32,17 +53,5 @@
       "type": "REPORT",
       "url": "https://github.com/johannhof/difference.rs/issues/45"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [],
-    "cvss": null,
-    "informational": "unmaintained"
-  }
+  ]
 }

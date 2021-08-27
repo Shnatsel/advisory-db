@@ -4,21 +4,42 @@
   "published": "2016-09-10T12:00:00+00:00",
   "aliases": [],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "libusb",
-    "purl": "pkg:cargo/libusb"
-  },
   "summary": "libusb is unmaintained; use rusb instead",
   "details": "The `libusb` crate has not seen a release since September 2016, and its author\nis unresponsive.\n\nThe `rusb` crate is a maintained fork:\n\nhttps://github.com/a1ien/rusb",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER",
-        "fixed": "0.3.1-0"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "libusb",
+        "purl": "pkg:cargo/libusb"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [],
+        "cvss": null,
+        "informational": "unmaintained"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "0.3.1-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -32,17 +53,5 @@
       "type": "REPORT",
       "url": "https://github.com/dcuddeback/libusb-rs/issues/33"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [],
-    "cvss": null,
-    "informational": "unmaintained"
-  }
+  ]
 }

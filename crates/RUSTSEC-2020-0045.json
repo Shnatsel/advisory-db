@@ -6,21 +6,44 @@
     "CVE-2020-35898"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "actix-utils",
-    "purl": "pkg:cargo/actix-utils"
-  },
   "summary": "bespoke Cell implementation allows obtaining several mutable references to the same data",
   "details": "The custom implementation of a Cell primitive in the affected versions of this crate\ndoes not keep track of mutable references to the underlying data.\n\nThis allows obtaining several mutable references to the same object\nwhich may result in arbitrary memory corruption, most likely use-after-free.\n\nThe flaw was corrected by switching from a bespoke `Cell<T>` implementation to `Rc<RefCell<T>>`.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER",
-        "fixed": "2.0.0"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "actix-utils",
+        "purl": "pkg:cargo/actix-utils"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [
+          "memory-corruption"
+        ],
+        "cvss": null,
+        "informational": "unsound"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "2.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -34,19 +57,5 @@
       "type": "REPORT",
       "url": "https://github.com/actix/actix-net/issues/160"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [
-      "memory-corruption"
-    ],
-    "cvss": null,
-    "informational": "unsound"
-  }
+  ]
 }

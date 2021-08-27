@@ -4,21 +4,42 @@
   "published": "2020-01-20T12:00:00+00:00",
   "aliases": [],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "rust_sodium",
-    "purl": "pkg:cargo/rust_sodium"
-  },
   "summary": "rust_sodium is unmaintained; switch to a modern alternative",
   "details": "The `rust_sodium` crate is no longer maintained by its current owner, who\nadvise in the repository readme that they are looking for\nsomeone else to take ownership of it.\n\nWe recommend you switch to an alternative crate such as:\n- [`sodiumoxide`](https://crates.io/crates/sodiumoxide)",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER",
-        "fixed": "0.10.3-0"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "rust_sodium",
+        "purl": "pkg:cargo/rust_sodium"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [],
+        "cvss": null,
+        "informational": "unmaintained"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "0.10.3-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -32,17 +53,5 @@
       "type": "WEB",
       "url": "https://github.com/maidsafe/rust_sodium/pull/117"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [],
-    "cvss": null,
-    "informational": "unmaintained"
-  }
+  ]
 }

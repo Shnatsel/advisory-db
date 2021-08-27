@@ -7,20 +7,45 @@
     "CVE-2019-15548"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "ncurses",
-    "purl": "pkg:cargo/ncurses"
-  },
   "summary": "Buffer overflow and format vulnerabilities in functions exposed without unsafe",
   "details": "`ncurses` exposes functions from the ncurses library which:\n\n- Pass buffers without length to C functions that may write an arbitrary amount of\n  data, leading to a buffer overflow. (`instr`, `mvwinstr`, etc)\n- Passes rust &str to strings expecting C format arguments, allowing hostile\n  input to execute a format string attack, which trivially allows writing\n  arbitrary data to stack memory (functions in the `printw` family).",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "ncurses",
+        "purl": "pkg:cargo/ncurses"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": [
+            "ncurses::instr",
+            "ncurses::mvprintw",
+            "ncurses::mvwinstr",
+            "ncurses::mvwprintw",
+            "ncurses::printw"
+          ]
+        }
+      },
+      "database_specific": {
+        "categories": [],
+        "cvss": null,
+        "informational": null
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -34,23 +59,5 @@
       "type": "REPORT",
       "url": "https://github.com/RustSec/advisory-db/issues/106"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": [
-        "ncurses::instr",
-        "ncurses::mvprintw",
-        "ncurses::mvwinstr",
-        "ncurses::mvwprintw",
-        "ncurses::printw"
-      ]
-    }
-  },
-  "database_specific": {
-    "categories": [],
-    "cvss": null,
-    "informational": null
-  }
+  ]
 }

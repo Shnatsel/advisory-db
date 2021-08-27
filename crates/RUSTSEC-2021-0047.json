@@ -6,20 +6,41 @@
     "CVE-2021-29938"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "slice-deque",
-    "purl": "pkg:cargo/slice-deque"
-  },
   "summary": "SliceDeque::drain_filter can double drop an element if the predicate panics",
   "details": "Affected versions of the crate incremented the current index of the drain filter\niterator *before* calling the predicate function `self.pred`.\n\nIf the predicate function panics, it is possible for the last element in the\niterator to be dropped twice.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "slice-deque",
+        "purl": "pkg:cargo/slice-deque"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [
+          "memory-corruption"
+        ],
+        "cvss": null,
+        "informational": null
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -33,19 +54,5 @@
       "type": "REPORT",
       "url": "https://github.com/gnzlbg/slice_deque/issues/90"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [
-      "memory-corruption"
-    ],
-    "cvss": null,
-    "informational": null
-  }
+  ]
 }

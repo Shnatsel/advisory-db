@@ -6,21 +6,42 @@
     "CVE-2020-35879"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "rulinalg",
-    "purl": "pkg:cargo/rulinalg"
-  },
   "summary": "Lifetime boundary for `raw_slice` and `raw_slice_mut` are incorrect",
   "details": "The affected version of `rulinalg` has incorrect lifetime boundary definitions\nfor `RowMut::raw_slice` and `RowMut::raw_slice_mut`. They do not conform with\nRust's borrowing rule and allows the user to create multiple mutable references\nto the same location. This may result in unexpected calculation result and data\nrace if both references are used at the same time.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER",
-        "introduced": "0.4.0"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "rulinalg",
+        "purl": "pkg:cargo/rulinalg"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": [
+            "rulinalg::matrix::RowMut::raw_slice",
+            "rulinalg::matrix::RowMut::raw_slice_mut"
+          ]
+        }
+      },
+      "database_specific": {
+        "categories": [],
+        "cvss": null,
+        "informational": null
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -34,20 +55,5 @@
       "type": "REPORT",
       "url": "https://github.com/AtheMathmo/rulinalg/issues/201"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": [
-        "rulinalg::matrix::RowMut::raw_slice",
-        "rulinalg::matrix::RowMut::raw_slice_mut"
-      ]
-    }
-  },
-  "database_specific": {
-    "categories": [],
-    "cvss": null,
-    "informational": null
-  }
+  ]
 }

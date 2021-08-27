@@ -6,20 +6,41 @@
     "CVE-2020-35860"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "cbox",
-    "purl": "pkg:cargo/cbox"
-  },
   "summary": "CBox API allows to de-reference raw pointers without `unsafe` code",
   "details": "`CBox` and `CSemiBox` are part of the public API of the cbox crate\nand they allow to create smart pointers from raw pointers and de-reference\nthem without the need of `unsafe` code.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "cbox",
+        "purl": "pkg:cargo/cbox"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [
+          "memory-corruption"
+        ],
+        "cvss": null,
+        "informational": null
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -33,19 +54,5 @@
       "type": "REPORT",
       "url": "https://github.com/TomBebbington/cbox-rs/issues/2"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [
-      "memory-corruption"
-    ],
-    "cvss": null,
-    "informational": null
-  }
+  ]
 }

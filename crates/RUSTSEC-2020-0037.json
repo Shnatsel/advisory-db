@@ -6,20 +6,39 @@
     "CVE-2020-35889"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "crayon",
-    "purl": "pkg:cargo/crayon"
-  },
   "summary": "Misbehaving `HandleLike` implementation can lead to memory safety violation",
   "details": "Unsafe code in `ObjectPool` has time-of-check to time-of-use (TOCTOU) bug that\ncan eventually lead to a memory safety violation. `ObjectPool` and `HandlePool`\nimplicitly assumes that `HandleLike` trait methods are pure, i.e., they always\nreturn the same value. However, this assumption is unsound since `HandleLike`\nis a safe, public trait that allows a custom implementation.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "crayon",
+        "purl": "pkg:cargo/crayon"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [],
+        "cvss": null,
+        "informational": "unsound"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -33,17 +52,5 @@
       "type": "REPORT",
       "url": "https://github.com/shawnscode/crayon/issues/87"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [],
-    "cvss": null,
-    "informational": "unsound"
-  }
+  ]
 }

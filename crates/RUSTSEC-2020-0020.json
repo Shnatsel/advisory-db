@@ -4,20 +4,39 @@
   "published": "2020-04-18T12:00:00+00:00",
   "aliases": [],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "stb_truetype",
-    "purl": "pkg:cargo/stb_truetype"
-  },
   "summary": "`stb_truetype` crate has been deprecated; use `ttf-parser` instead",
   "details": "This crate was maintained for use in rusttype which has switched to use [ttf-parser](https://crates.io/crates/ttf-parser)",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "stb_truetype",
+        "purl": "pkg:cargo/stb_truetype"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [],
+        "cvss": null,
+        "informational": "unmaintained"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -31,17 +50,5 @@
       "type": "WEB",
       "url": "https://gitlab.redox-os.org/redox-os/stb_truetype-rs/-/commit/f1f5be4794e87bfc80a4255bc3f23ed75dd77645"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [],
-    "cvss": null,
-    "informational": "unmaintained"
-  }
+  ]
 }

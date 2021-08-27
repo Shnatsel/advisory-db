@@ -7,20 +7,39 @@
     "CVE-2020-35891"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "ordnung",
-    "purl": "pkg:cargo/ordnung"
-  },
   "summary": "Memory safety issues in `compact::Vec`",
   "details": "`compact::Vec` contains multiple memory safety issues.\n\n1. It mishandles large capacity and causes out-of-bound access in 32-bit / allocator layout mismatch in 64-bit.\n2. `remove()` is not panic-safe and causes double-free when an index larger than the length is provided.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "ordnung",
+        "purl": "pkg:cargo/ordnung"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [],
+        "cvss": null,
+        "informational": null
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -34,17 +53,5 @@
       "type": "REPORT",
       "url": "https://github.com/maciejhirsz/ordnung/issues/8"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [],
-    "cvss": null,
-    "informational": null
-  }
+  ]
 }

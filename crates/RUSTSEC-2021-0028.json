@@ -7,21 +7,46 @@
     "CVE-2021-28029"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "toodee",
-    "purl": "pkg:cargo/toodee"
-  },
   "summary": "Multiple memory safety issues in insert_row",
   "details": "When inserting rows from an iterator at a particular index, `toodee` would shift\nitems over, duplicating their ownership. The space reserved for the new elements\nwas based on the `len()` returned by the `ExactSizeIterator`.\n\nThis could result in elements in the array being freed twice if the iterator\npanics. Uninitialized or previously freed elements could also be exposed if the\n`len()` didn't match the number of elements.\n\nThese issues were fixed in commit `ced70c17` by temporarily setting the length\nof the array smaller while processing it and adding assertions on the number\nof elements returned by the iterator.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER",
-        "fixed": "0.3.0"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "toodee",
+        "purl": "pkg:cargo/toodee"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": [
+            "toodee::TooDee::insert_row"
+          ]
+        }
+      },
+      "database_specific": {
+        "categories": [
+          "memory-corruption"
+        ],
+        "cvss": null,
+        "informational": null
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "0.3.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -35,21 +60,5 @@
       "type": "REPORT",
       "url": "https://github.com/antonmarsden/toodee/issues/13"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": [
-        "toodee::TooDee::insert_row"
-      ]
-    }
-  },
-  "database_specific": {
-    "categories": [
-      "memory-corruption"
-    ],
-    "cvss": null,
-    "informational": null
-  }
+  ]
 }

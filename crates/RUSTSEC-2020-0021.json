@@ -6,20 +6,42 @@
     "CVE-2020-35876"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "rio",
-    "purl": "pkg:cargo/rio"
-  },
   "summary": "rio allows a use-after-free buffer access when a future is leaked",
   "details": "When a `rio::Completion` is leaked, its drop code will not run. The drop code\nis responsible for waiting until the kernel completes the I/O operation into, or\nout of, the buffer borrowed by `rio::Completion`. Leaking the struct will allow\none to access and/or drop the buffer, which can lead to a use-after-free,\ndata races or leaking secrets.\n\nUpstream is not interested in fixing the issue.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "rio",
+        "purl": "pkg:cargo/rio"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [
+          "memory-corruption",
+          "memory-exposure"
+        ],
+        "cvss": null,
+        "informational": null
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -33,20 +55,5 @@
       "type": "REPORT",
       "url": "https://github.com/spacejam/rio/issues/11"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [
-      "memory-corruption",
-      "memory-exposure"
-    ],
-    "cvss": null,
-    "informational": null
-  }
+  ]
 }

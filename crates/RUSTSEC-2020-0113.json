@@ -6,20 +6,42 @@
     "CVE-2020-36219"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "atomic-option",
-    "purl": "pkg:cargo/atomic-option"
-  },
   "summary": "AtomicOption should have Send + Sync bound on its type argument.",
   "details": "In the affected versions of this crate,\n`AtomicOption<T>` unconditionally implements `Sync`.\n\nThis allows programmers to move non-Sync types across thread boundaries (e.g. `Rc<T>`, `Arc<Cell<T>>`), which can lead to data races and undefined behavior. \nIt is also possible to send non-Send types like `std::sync::MutexGuard` to other threads, which can lead to undefined behavior.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "atomic-option",
+        "purl": "pkg:cargo/atomic-option"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [
+          "memory-corruption",
+          "thread-safety"
+        ],
+        "cvss": null,
+        "informational": null
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -33,20 +55,5 @@
       "type": "REPORT",
       "url": "https://github.com/reem/rust-atomic-option/issues/4"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [
-      "memory-corruption",
-      "thread-safety"
-    ],
-    "cvss": null,
-    "informational": null
-  }
+  ]
 }

@@ -6,21 +6,44 @@
     "CVE-2019-16880"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "linea",
-    "purl": "pkg:cargo/linea"
-  },
   "summary": "`Matrix::zip_elements` causes double free",
   "details": "Affected versions of this crate did not properly implements the `Matrix::zip_elements` method, which causes an double free when the given trait implementation might panic.\n\nThis allows an attacker to corrupt or take control of the memory.\n \nThe flaw was corrected by Phosphorus15.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER",
-        "fixed": "0.9.5-0"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "linea",
+        "purl": "pkg:cargo/linea"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [
+          "memory-corruption"
+        ],
+        "cvss": null,
+        "informational": null
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "0.9.5-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -34,19 +57,5 @@
       "type": "REPORT",
       "url": "https://github.com/strake/linea.rs/issues/2"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [
-      "memory-corruption"
-    ],
-    "cvss": null,
-    "informational": null
-  }
+  ]
 }

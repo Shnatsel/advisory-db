@@ -4,20 +4,42 @@
   "published": "2020-11-12T12:00:00+00:00",
   "aliases": [],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "bunch",
-    "purl": "pkg:cargo/bunch"
-  },
   "summary": "Bunch<T> unconditionally implements Send/Sync",
   "details": "Affected versions of this crate unconditionally implements `Send`/`Sync` for `Bunch<T>`.\nThis allows users to insert `T: !Sync` to `Bunch<T>`. It is possible to create a data race to a `T: !Sync` by invoking the `Bunch::get()` API (which returns `&T`) from multiple threads. It is also possible to send `T: !Send` to other threads by inserting `T` inside `Bunch<T>` and sending `Bunch<T>` to another thread, allowing to create a data race by inserting types like `T = Rc<_>`.\n\nSuch data races can lead to memory corruption.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "bunch",
+        "purl": "pkg:cargo/bunch"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [
+          "memory-corruption",
+          "thread-safety"
+        ],
+        "cvss": null,
+        "informational": null
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -31,20 +53,5 @@
       "type": "REPORT",
       "url": "https://github.com/krl/bunch/issues/1"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [
-      "memory-corruption",
-      "thread-safety"
-    ],
-    "cvss": null,
-    "informational": null
-  }
+  ]
 }

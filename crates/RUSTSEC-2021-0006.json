@@ -6,20 +6,41 @@
     "CVE-2021-25903"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "cache",
-    "purl": "pkg:cargo/cache"
-  },
   "summary": "Exposes internally used raw pointer",
   "details": "Affected versions of this crate dereference a raw pointer that can be modified\nwithout using `unsafe` code.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "cache",
+        "purl": "pkg:cargo/cache"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [
+          "memory-corruption"
+        ],
+        "cvss": null,
+        "informational": "unsound"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -33,19 +54,5 @@
       "type": "REPORT",
       "url": "https://github.com/krl/cache/issues/2"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [
-      "memory-corruption"
-    ],
-    "cvss": null,
-    "informational": "unsound"
-  }
+  ]
 }

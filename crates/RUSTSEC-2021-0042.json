@@ -6,20 +6,41 @@
     "CVE-2021-29933"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "insert_many",
-    "purl": "pkg:cargo/insert_many"
-  },
   "summary": "insert_many can drop elements twice on panic",
   "details": "Affected versions of `insert_many` used `ptr::copy` to move over items in a\nvector to make space before inserting, duplicating their ownership. It then\niterated over a provided `Iterator` to insert the new items.\n\nIf the iterator's `.next()` method panics then the vector would drop the same\nelements twice.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "insert_many",
+        "purl": "pkg:cargo/insert_many"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [
+          "memory-corruption"
+        ],
+        "cvss": null,
+        "informational": null
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -33,19 +54,5 @@
       "type": "REPORT",
       "url": "https://github.com/rphmeier/insert_many/issues/1"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [
-      "memory-corruption"
-    ],
-    "cvss": null,
-    "informational": null
-  }
+  ]
 }

@@ -1,23 +1,43 @@
 {
   "id": "RUSTSEC-2020-0053",
-  "modified": "2021-04-19T16:31:05+00:00",
+  "modified": "2021-06-29T22:08:30+00:00",
   "published": "2020-10-16T12:00:00+00:00",
+  "withdrawn": "2021-04-19T12:00:00+00:00",
   "aliases": [],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "dirs",
-    "purl": "pkg:cargo/dirs"
-  },
   "summary": "dirs is unmaintained, use dirs-next instead",
   "details": "The `dirs` crate is not maintained any more;\nuse [`dirs-next`](https://crates.io/crates/dirs-next) instead.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "dirs",
+        "purl": "pkg:cargo/dirs"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [],
+        "cvss": null,
+        "informational": "unmaintained"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -31,17 +51,5 @@
       "type": "WEB",
       "url": "https://github.com/dirs-dev/dirs-rs"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [],
-    "cvss": null,
-    "informational": "unmaintained"
-  }
+  ]
 }

@@ -6,22 +6,44 @@
     "CVE-2020-1967"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "openssl-src",
-    "purl": "pkg:cargo/openssl-src"
-  },
   "summary": "Crash causing Denial of Service attack",
   "details": "Server or client applications that call the SSL_check_chain() function during or after a TLS 1.3 \nhandshake may crash due to a NULL pointer dereference as a result of incorrect handling of the \n\"signature_algorithms_cert\" TLS extension. The crash occurs if an invalid or unrecognised signature \nalgorithm is received from the peer. This could be exploited by a malicious peer in a Denial of \nService attack.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER",
-        "introduced": "111.6.0",
-        "fixed": "111.9.0"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "openssl-src",
+        "purl": "pkg:cargo/openssl-src"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [
+          "denial-of-service"
+        ],
+        "cvss": null,
+        "informational": null
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "111.6.0"
+            },
+            {
+              "fixed": "111.9.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -35,19 +57,5 @@
       "type": "WEB",
       "url": "https://www.openssl.org/news/secadv/20200421.txt"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [
-      "denial-of-service"
-    ],
-    "cvss": null,
-    "informational": null
-  }
+  ]
 }

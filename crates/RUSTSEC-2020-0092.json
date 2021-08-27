@@ -6,21 +6,44 @@
     "CVE-2020-35928"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "concread",
-    "purl": "pkg:cargo/concread"
-  },
   "summary": "Send/Sync bound needed on V in `impl Send/Sync for ARCache<K, V>`",
   "details": "Affected versions of this crate unconditionally implemented `Send`/`Sync` traits for `ARCache<K, V>` type.\n\nThis allows users to send/access types that do not implement `Send`/`Sync`, which can cause a data race.\n\nThe flaw was corrected in the 0.2.6 release by adding bounds `K: Send + Sync` & `V: Send + Sync` to affected `Send`/`Sync` trait implementations.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER",
-        "fixed": "0.2.6"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "concread",
+        "purl": "pkg:cargo/concread"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [
+          "thread-safety"
+        ],
+        "cvss": null,
+        "informational": "unsound"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "0.2.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -34,19 +57,5 @@
       "type": "REPORT",
       "url": "https://github.com/kanidm/concread/issues/48"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [
-      "thread-safety"
-    ],
-    "cvss": null,
-    "informational": "unsound"
-  }
+  ]
 }

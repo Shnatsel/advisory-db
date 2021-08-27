@@ -6,20 +6,42 @@
     "CVE-2019-15546"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "pancurses",
-    "purl": "pkg:cargo/pancurses"
-  },
   "summary": "Format string vulnerabilities in `pancurses`",
   "details": "`pancurses::mvprintw` and `pancurses::printw` passes a pointer from a rust `&str` to C,\nallowing hostile input to execute a format string attack, which trivially allows writing\narbitrary data to stack memory.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "pancurses",
+        "purl": "pkg:cargo/pancurses"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": [
+            "pancurses::mvprintw",
+            "pancurses::printw"
+          ]
+        }
+      },
+      "database_specific": {
+        "categories": [],
+        "cvss": null,
+        "informational": null
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -33,20 +55,5 @@
       "type": "REPORT",
       "url": "https://github.com/RustSec/advisory-db/issues/106"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": [
-        "pancurses::mvprintw",
-        "pancurses::printw"
-      ]
-    }
-  },
-  "database_specific": {
-    "categories": [],
-    "cvss": null,
-    "informational": null
-  }
+  ]
 }

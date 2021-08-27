@@ -6,21 +6,44 @@
     "CVE-2021-23840"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "openssl-src",
-    "purl": "pkg:cargo/openssl-src"
-  },
   "summary": "Integer overflow in CipherUpdate",
   "details": "Calls to `EVP_CipherUpdate`, `EVP_EncryptUpdate` and `EVP_DecryptUpdate` may overflow\nthe output length argument in some cases where the input length is close to the\nmaximum permissable length for an integer on the platform. In such cases the\nreturn value from the function call will be 1 (indicating success), but the\noutput length value will be negative. This could cause applications to behave\nincorrectly or crash.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER",
-        "fixed": "111.14.0"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "openssl-src",
+        "purl": "pkg:cargo/openssl-src"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [
+          "denial-of-service"
+        ],
+        "cvss": null,
+        "informational": null
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "111.14.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -34,19 +57,5 @@
       "type": "WEB",
       "url": "https://www.openssl.org/news/secadv/20210216.txt"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [
-      "denial-of-service"
-    ],
-    "cvss": null,
-    "informational": null
-  }
+  ]
 }

@@ -6,21 +6,39 @@
     "CVE-2020-35900"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "array-queue",
-    "purl": "pkg:cargo/array-queue"
-  },
   "summary": "array_queue pop_back() may cause a use-after-free",
   "details": "array_queue implements a circular queue that wraps around an array. However, it\nfails to properly index into the array in the `pop_back` function allowing the\nreading of previously dropped or uninitialized memory.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER",
-        "introduced": "0.3.0"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "array-queue",
+        "purl": "pkg:cargo/array-queue"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [],
+        "cvss": null,
+        "informational": null
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.3.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -34,17 +52,5 @@
       "type": "REPORT",
       "url": "https://github.com/raviqqe/array-queue/issues/2"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [],
-    "cvss": null,
-    "informational": null
-  }
+  ]
 }

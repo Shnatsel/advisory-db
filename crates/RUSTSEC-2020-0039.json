@@ -7,21 +7,42 @@
     "CVE-2020-35893"
   ],
   "related": [],
-  "package": {
-    "ecosystem": "crates.io",
-    "name": "simple-slab",
-    "purl": "pkg:cargo/simple-slab"
-  },
   "summary": "`index()` allows out-of-bound read and `remove()` has off-by-one error",
   "details": "`Slab::index()` does not perform the boundary checking, which leads to out-of-bound read access. `Slab::remove()` copies an element from an invalid address due to off-by-one error, resulting in memory leakage and uninitialized memory drop.",
-  "affects": {
-    "ranges": [
-      {
-        "type": "SEMVER",
-        "fixed": "0.3.3"
-      }
-    ]
-  },
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "simple-slab",
+        "purl": "pkg:cargo/simple-slab"
+      },
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        }
+      },
+      "database_specific": {
+        "categories": [],
+        "cvss": null,
+        "informational": null
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "0.3.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "PACKAGE",
@@ -35,17 +56,5 @@
       "type": "REPORT",
       "url": "https://github.com/nathansizemore/simple-slab/issues/2"
     }
-  ],
-  "ecosystem_specific": {
-    "affects": {
-      "arch": [],
-      "os": [],
-      "functions": []
-    }
-  },
-  "database_specific": {
-    "categories": [],
-    "cvss": null,
-    "informational": null
-  }
+  ]
 }
